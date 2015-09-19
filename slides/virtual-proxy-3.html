@@ -1,0 +1,17 @@
+<pre><code contenteditable>class ImageVirtualProxy extends Image {
+    protected $wrapped;
+    public function __construct($path) {
+        $this-&gt;path = $path;
+    }
+
+    public function getSize() {
+        $this-&gt;init();
+        return $this-&gt;wrapped-&gt;getSize();
+    }
+
+    private function init() {
+        if ( ! $this-&gt;wrapped) {
+            $this-&gt;wrapped = new Image($this-&gt;path);
+        }
+    }
+}</code></pre>

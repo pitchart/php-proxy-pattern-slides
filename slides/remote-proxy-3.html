@@ -1,0 +1,13 @@
+<pre><code contenteditable>class TweetProxy extends Tweet {
+    protected $api;
+    protected $id;
+
+    public function __construct(TwitterApi $api, $id) {
+        $this-&gt;api = $api;
+        $this-&gt;id  = $id;
+    }
+
+    public function getText() {
+        return $this-&gt;api-&gt;getTweetText($this-&gt;id);
+    }
+}</code></pre>

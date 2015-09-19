@@ -1,0 +1,22 @@
+<pre><code contenteditable>    /** @AOP\Cache(ttl=3600) */
+    public function doHeavyStuff() {
+        // [...]
+    }</code></pre>
+    <p class="fragment">Devient :</p>
+    <pre class="fragment"><code contenteditable>class APICachingProxy extends API {
+    public function __construct(API $api, Cache $cache) {
+        $this-&gt;api = $api; $this-&gt;cache = $cache;
+    }
+
+    public function doHeavyStuff() {
+        if ($cached = $this-&gt;cache-&gt;get('doHeavyStuff')) {
+            return $cached;
+        }
+
+        $result = $this-&gt;api-&gt;doHeavyStuff();
+
+        $this-&gt;cache-&gt;set('doHeavyStuff', $result, 3600);
+
+        return $result;
+    }
+}</code></pre>

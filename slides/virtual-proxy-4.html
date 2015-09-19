@@ -1,0 +1,11 @@
+<pre><code contenteditable>$img1 = new ImageProxy('/path/to/image1.jpg');
+var_dump(memory_get_usage()); // ~200Kb
+$img2 = new ImageProxy('/path/to/image2.jpg');
+var_dump(memory_get_usage()); // ~200Kb
+$img3 = new ImageProxy('/path/to/image3.jpg');
+var_dump(memory_get_usage()); // ~200Kb
+
+$size1 = $img1-&gt;getSize();
+var_dump(memory_get_usage()); // ~4Mb
+$size2 = $img2-&gt;getSize();
+var_dump(memory_get_usage()); // ~8Mb</code></pre>

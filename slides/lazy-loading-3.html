@@ -1,0 +1,17 @@
+<pre><code contenteditable>class Customer {
+    public function __construct(DbConnection $db, $id) {
+        $this-&gt;db = $db;
+        $this-&gt;id = $id;
+    }
+
+    public function getName() {
+        $this-&gt;init();
+        return $this-&gt;data['name'];
+    }
+
+    private function init() {
+        if (!isset($this-&gt;data)) {
+            $this-&gt;data = $this-&gt;db-&gt;load($this-&gt;id);
+        }
+    }
+}</code></pre>

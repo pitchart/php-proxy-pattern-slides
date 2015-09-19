@@ -1,0 +1,17 @@
+<pre><code contenteditable>class ImageGhostProxy extends Image {
+    protected $initialized = false;
+    public function __construct($path) {
+        $this-&gt;path = $path;
+    }
+    public function getSize() {
+        $this-&gt;init();
+        return parent::getSize();
+    }
+    private function init() {
+        if ( ! $this-&gt;initialized) {
+            $image             = new Image($this-&gt;path);
+            $this-&gt;image       = $image-&gt;image;
+            $this-&gt;initialized = true;
+        }
+    }
+}</code></pre>

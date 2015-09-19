@@ -1,0 +1,17 @@
+<pre><code contenteditable>class APIProtectionProxy extends API {
+    protected $count = 0;
+    public function __construct(API $api, $limit) {
+        $this-&gt;api = $api; $this-&gt;limit = $limit;
+    }
+
+    public function doStuff() {
+        $this-&gt;count();
+        return $this-&gt;api-&gt;doStuff();
+    }
+
+    private function count() {
+        if (++$this-&gt;count > $this-&gt;limit) {
+            throw new RemoteApiLimitException('STOP!');
+        }
+    }
+}</code></pre>

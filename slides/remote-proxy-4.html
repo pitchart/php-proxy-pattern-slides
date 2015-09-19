@@ -1,0 +1,10 @@
+<pre><code contenteditable>$tweet = new Tweet(array('text' => 'Remote Proxy en PHP !'));
+var_dump($tweet-&gt;getText()); // Remote Proxy en PHP !
+
+$api = new TwitterApi(/* ... */);
+
+$remoteTweet = new TweetProxy($api, 280643708968386560);
+var_dump($remoteTweet-&gt;getText()); // Tweet !
+
+$remoteTweet = new TweetProxy($api, 280643708968386561);
+var_dump($remoteTweet-&gt;getText()); // Tweet tweet !</code></pre>

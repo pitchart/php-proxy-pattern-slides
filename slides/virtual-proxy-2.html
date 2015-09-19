@@ -1,0 +1,13 @@
+<pre><code contenteditable>class Image {
+    protected $image;
+    public function __construct($path) {
+        $this-&gt;image = imagecreatefromjpeg($path);
+    }
+
+    public function getSize() {
+        return array(
+            imagesx($this-&gt;image),
+            imagesy($this-&gt;image),
+        );
+    }
+}</code></pre>

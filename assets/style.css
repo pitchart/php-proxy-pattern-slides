@@ -1,0 +1,116 @@
+/*
+@font-face {
+    font-family: 'Share-bold';
+    src: url('./fonts/share-bold-webfont.eot');
+    src: url('./fonts/share-bold-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/share-bold-webfont.woff') format('woff'), url('./fonts/share-bold-webfont.ttf') format('truetype'), url('./fonts/share-bold-webfont.svg#Share-BoldRegular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Share-italic';
+    src: url('./fonts/share-italic-webfont.eot');
+    src: url('./fonts/share-italic-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/share-italic-webfont.woff') format('woff'), url('./fonts/share-italic-webfont.ttf') format('truetype'), url('./fonts/share-italic-webfont.svg#Share-ItalicRegular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+@font-face {
+    font-family: 'Share';
+    src: url('./fonts/share-regular-webfont.eot');
+    src: url('./fonts/share-regular-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/share-regular-webfont.woff') format('woff'), url('./fonts/share-regular-webfont.ttf') format('truetype'), url('./fonts/share-regular-webfont.svg#Share-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Share-bold';
+    src: url('./fonts/share-bolditalic-webfont.eot');
+    src: url('./fonts/share-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/share-bolditalic-webfont.woff') format('woff'), url('./fonts/share-bolditalic-webfont.ttf') format('truetype'), url('./fonts/share-bolditalic-webfont.svg#Share-BoldItalicRegular') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+*/
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: Share, Verdana, Arial, Helvetica, sans-serif;
+    text-transform: none;
+    text-shadow: none;
+}
+
+.reveal section img.inline {
+    border: 0;
+    background: none;
+}
+
+.reveal section img.logo {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+    border-radius:50%;
+}
+
+.reveal pre {
+    width: 100%;
+    font-size: 0.68em;
+}
+
+.reveal pre code { max-height: 600px;}
+
+.reveal a { color: #008AFF;}
+.reveal small { font-size: 0.875em; }
+
+/*** SPACES ***/
+.mts, .mvs, .mas {margin-top:0.5em !important;}
+.mbs, .mvs, .mas {margin-bottom:0.5em !important;}
+.mrs, .mhs, .mas {margin-right:0.5em !important;}
+.mls, .mhs, .mas {margin-left:0.5em !important;}
+.mtm, .mvm, .mam {margin-top:1em !important;}
+.mbm, .mvm, .mam {margin-bottom:1em !important;}
+.mrm, .mhm, .mam {margin-right:1em !important;}
+.mlm, .mhm, .mam {margin-left:1em !important;}
+.mtl, .mvl, .mal {margin-top:1.5em !important;}
+.mbl, .mvl, .mal {margin-bottom:1.5em !important;}
+.mrl, .mhl, .mal {margin-right:1.5em !important;}
+.mll, .mhl, .mal {margin-left:1.5em !important;}
+
+
+
+/*** COLORS ***/
+.t3-color { color: #f58006 !important; }
+.opq-color { color: #3eab34 !important; }
+.sf2-color { color: #08C !important; }
+.php-color { color: #6C7EB7 !important; }
+.proxy-color { color: #f58006 !important; /* #FC6A31; */ }
+.anet-color { color: #008AFF !important; }
+.doctrine-color { color: #FC6A31 !important; }
+.tw-color { color: #55ACEE !important; }
+.sf2-bg {
+    background-color: #f0f0f0;
+}
+
+.vam { vertical-align: middle !important;}
+
+
+.soothe .reveal .state-background {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.pros-line:before, .cons-line:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    border: 12px solid transparent;
+}
+
+.pros-line:before {
+    border-bottom-width: 22px;
+    border-bottom-color: #3eab34;
+}
+
+.cons-line:before {
+    margin-top: 12px;
+    border-top-width: 22px;
+    border-top-color: #f58006   ;
+}
+
+.biblio {}
